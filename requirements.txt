@@ -1,0 +1,11 @@
+orpheus-speech
+vllm==0.7.3
+torch
+tqdm
+pyyaml
+numpy
+soundfile
+wave
+pandas
+matplotlib
+seaborn

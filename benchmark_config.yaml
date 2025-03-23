@@ -1,0 +1,45 @@
+# Benchmark configuration file
+
+voices:
+  - tara
+  - leah
+  - jess
+  - leo
+  - dan
+  - mia
+  - zac
+  - zoe
+
+test_scenarios:
+  - name: basic_speech
+    text: "This is a basic test of the speech synthesis system."
+    temperature: 1.0
+    top_p: 0.9
+    repetition_penalty: 1.1
+
+  - name: emotional_speech
+    text: "<laugh> This is really exciting! <sigh> But sometimes it can be challenging."
+    temperature: 1.2
+    top_p: 0.95
+    repetition_penalty: 1.2
+
+  - name: long_text
+    text: "Man, the way social media has, um, completely changed how we interact is just wild, right? Like, we're all connected 24/7 but somehow people feel more alone than ever. And don't even get me started on how it's messing with kids' self-esteem and mental health and whatnot."
+    temperature: 1.0
+    top_p: 0.9
+    repetition_penalty: 1.15
+
+  - name: conversational
+    text: "Hey there! <chuckle> I was just thinking about that movie we watched last night. It was pretty amazing, wasn't it?"
+    temperature: 1.1
+    top_p: 0.92
+    repetition_penalty: 1.2
+
+output_directory: "benchmark_results"
+
+# Model configurations
+model_configs:
+  - name: "finetune-prod"
+    model_path: "canopylabs/orpheus-tts-0.1-finetune-prod"
+  - name: "pretrained"
+    model_path: "canopylabs/orpheus-tts-0.1-pretrained"
